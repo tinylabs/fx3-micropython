@@ -9,3 +9,6 @@ TODO:
 - Use memoryview for portion of onchip 1MB SRAM and some micropython heap
 - Put frozen .mpy modules on 512kB onchip flash
 - Implement high speed FPGA access via FIFO interface/bulk USB EP
+
+Later:
+- Include ulab for cmsis-dsp access
