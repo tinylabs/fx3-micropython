@@ -1,3 +1,4 @@
+```
 TODO:
 - Pull dependencies using their dependency resolution .mtb/.mtbx
 - Compile libraries for each chipset/cpu/package combination.
@@ -33,6 +34,7 @@ TODO:
 - Implement high speed FPGA access via FIFO interface/bulk USB EP
 - Implement mass storage device on CM0 to exposed micropython filesystem.
 -   Reset CM4/re-enumerate when ejected.
-  
+```
 Later:
 - Include ulab for cmsis-dsp access
+```
