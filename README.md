@@ -35,5 +35,6 @@ TODO:
 -   Reset CM4/re-enumerate when ejected.
 
 Later:
+- Implement CDC-NCM and tie into micropython networking
 - Include ulab for cmsis-dsp access
 ```
