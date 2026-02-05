@@ -38,4 +38,11 @@ TODO:
 Later:
 - Implement CDC-NCM and tie into micropython networking
 - Include ulab for cmsis-dsp access
+
+Dev notes:
+- All parts supported FX3G2/FX5/FX10/FX20 will correspond to either gpio_fx2g2_104_lga.h or gpio_fx2g2_169_bga.h for pin muxing.
+- This is the ground truth for pin muxes.
+- This should be useful: https://github.com/Infineon/mtb-micropython-psoc6-port-integration since they are considered psoc6.
+- This micropython port should be largely applicable: https://ifx-micropython.readthedocs.io/en/latest/psoc6/quickref.html
+- CY8C624ABZI-S2D44 shares the same processor and peripheral architecture.
 ```
