@@ -2,13 +2,13 @@
 TODO:
 - Pull dependencies using their dependency resolution .mtb/.mtbx
 - Compile libraries for each chipset/cpu/package combination.
-   CM0+ should only need USB stack + USB drivers + DMA + IPC + SPI + SMIF.
+   CM0+ should only need USB stack + USB drivers + DMA + IPC + SMIF.
    CM4 will need all peripheral drivers (Unused will compile out with -ffunction-sections -fdata-sections)
 - Port cypress USB stack to run only on the Cortex-M0
    CM0 handles USB enumeration.
    Virtual REPL CDC.
-   MSC for CM4 image update. FPGA bitstream update.
-   FPGA updates over SPI.
+   MSC for CM4 image update (U2F).
+   MTP access to micropython filesystem.
    High speed USB <-> FIFO interface to FPGA
    Instantiating bulk endpoints for CM4 usage.
    Tickling DMA for USB transactions.
@@ -16,9 +16,10 @@ TODO:
 - CM4 will run micropython.
    Communicate with CM0 for REPL.
    Pass enumeration VID/PID descriptors to CM0.
-   Request endpoints from CM0.
+   Request endpoints from CM0 (before enumeration).
    Basic peripherals comms (UART/SPI/I2C).
-   Access to FPGA bus via high speed FIFO interface.
+   FPGA updates over SPI (either from bitstream in filesystem or MSC upload over USB).
+   Access to FPGA internal bus via high speed FIFO interface.
    Access littlefs filesystem via CM0 IPC SMIF low level commands.
    Run init python script from filesystem.
 
