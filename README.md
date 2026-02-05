@@ -3,7 +3,7 @@ TODO:
 - Pull dependencies using their dependency resolution .mtb/.mtbx
 - Compile libraries for each chipset/cpu/package combination.
    CM0+ should only need USB stack + USB drivers + DMA + IPC + SMIF.
-   CM4 will need all peripheral drivers (Unused will compile out with -ffunction-sections -fdata-sections)
+   CM4 will need all peripheral drivers + IPC (Unused will compile out with -ffunction-sections -fdata-sections)
 - Port cypress USB stack to run only on the Cortex-M0
    CM0 handles USB enumeration.
    Virtual REPL CDC.
@@ -27,10 +27,10 @@ TODO:
 - Create virtual serial port managed by CM0 using IPC
 - Port micropython over to CM4
 - Use virtual serial port for REPL
+- Move CM0 IRQs/hot paths to 128kB SRAM to decongest 512kB flash.
 - Use external 8MB SPI flash for file system storage
-- Manage micropython heap using portion of 128kB RAM for locals
-- Use memoryview for portion of onchip 1MB SRAM and some micropython heap
-- Put frozen .mpy modules on 512kB onchip flash
+- Manage micropython heap using portion of 128kB RAM for locals. Use 1MB SRAM for large object storage.
+- Put frozen core .mpy modules on 512kB onchip flash
 - Implement high speed FPGA access via FIFO interface/bulk USB EP
 - Implement mass storage device on CM0 to exposed micropython filesystem.
 -   Reset CM4/re-enumerate when ejected.
